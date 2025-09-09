@@ -1,56 +1,41 @@
-# 🖼 Advanced Image WorkDesk  
+# Image Processing Application
 
-An *all-in-one AI-powered image editing tool* built with *Streamlit, **Stable Diffusion, and **OpenCV*.  
-This app combines classic computer vision techniques with modern generative AI, enabling users to edit, enhance, and generate stunning images effortlessly.  
+This project provides an interactive web-based application for **image generation and inpainting** using state-of-the-art diffusion models. Built with **Streamlit** and powered by **Hugging Face Diffusers**, the app enables users to upload images, mask regions for inpainting, and generate/edit images using natural-language prompts.
 
----
+## Table of Contents
 
-## 🚀 Features  
+- [Introduction](#introduction)  
+- [Problem Definition](#problem-definition)  
+- [Features](#features)  
+- [Installation](#installation)  
+- [Usage](#usage)  
+- [Configuration & Data Format](#configuration--data-format)  
+- [Examples](#examples)  
+- [References](#references)  
+- [License](#license)
 
-- *Image Input Options*  
-  - Upload from your device  
-  - Capture with your camera  
-  - Load from a URL  
-  - Generate new images with *Stable Diffusion XL (Text-to-Image)*  
+## Introduction
 
-- *Editing Tools*  
-  - Crop  
-  - Background removal (via rembg)  
-  - Mirror / Flip  
-  - Convert to grayscale or black & white  
-  - Rotate  
-  - Adjust brightness, contrast, saturation, sharpness  
-  - Compare original vs. processed images  
-  - Download processed image  
+Recent advances in generative models make realistic image editing accessible through simple text instructions. This application wraps model inference into a small Streamlit interface so users can experiment with prompt-driven image generation and inpainting without complex setup.
 
-- *AI-Powered Enhancements*  
-  - Colorize black & white images  
-  - Stable Diffusion XL Image-to-Image  
-  - Stable Diffusion XL Inpainting (mask-based editing)  
-  - Randomize effects  
+## Problem Definition
 
----
+Manual image editing is time-consuming and often requires skill with graphical tools. The goal of this project is to provide an **easy-to-use interface** that allows users to:
+- Generate images from text prompts.
+- Edit parts of existing images by masking (inpainting).
+- Quickly iterate on prompts and settings to produce desired outputs.
 
-## 🛠 Tech Stack  
+## Features
 
-- *Frontend & App*: Streamlit  
-- *Image Editing*: Pillow, OpenCV, rembg  
-- *Generative AI*: Diffusers (Stable Diffusion XL)  
-- *Model Integration*: Hugging Face Inference API  
-- *Deployment*: LocalTunnel / Streamlit  
+- **Text-to-Image Generation** using diffusion models.
+- **Inpainting**: mask a region of an input image and fill it according to a prompt.
+- **Streamlit UI**: lightweight interactive frontend for experimentation.
+- **GPU support**: uses PyTorch/CUDA when available for faster inference.
+- **Simple deployment**: runs locally or can be exposed using tools like `localtunnel` or ngrok.
 
----
+## Installation
 
-## 📦 Installation  
-
-Clone the repository and install dependencies:  
-
-```bash
-git clone https://github.com/ayushmohta7/Advanced-Image-WorkDesk.git
-cd Advanced-Image-WorkDesk
-
-# Install Python dependencies
-pip install -r requirements.txt
-
-# (Optional) Install LocalTunnel for sharing
-npm install -g localtunnel
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/your-username/Image-Processing-Application.git
+   cd Image-Processing-Application

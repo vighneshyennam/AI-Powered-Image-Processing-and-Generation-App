@@ -57,4 +57,45 @@ source venv/bin/activate
 
 # Windows (PowerShell)
 python -m venv venv
+
+```
+
+## Usage
+
+1. **Prepare input image:**
+
+   Place your input images in the `data/` directory or upload them via the Streamlit interface.
+
+2. **Configure prompts:**
+
+   Edit the prompt text in the application or in the `config.json` file to specify the desired image transformation (e.g., *"a cat wizard in Pixar style"*).
+
+3. **Run the application:**
+
+   Launch the Streamlit app locally:
+
+   ```bash
+   streamlit run app.py
+
+
+
 venv\Scripts\Activate.ps1
+
+
+
+---
+
+### ✅ References block
+
+## References
+
+- **Hugging Face Diffusers:** [Documentation](https://huggingface.co/docs/diffusers/index)  
+- **Streamlit:** [Streamlit Documentation](https://docs.streamlit.io/)  
+- **PyTorch:** [PyTorch Official Site](https://pytorch.org/)  
+- **Image Inpainting with Diffusers Blog:** [Hugging Face Blog](https://huggingface.co/blog/inpainting)
+
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+

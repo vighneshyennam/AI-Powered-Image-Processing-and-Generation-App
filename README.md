@@ -8,9 +8,20 @@ This project provides an interactive web-based application for **image generatio
 - [Problem Definition](#problem-definition)  
 - [Features](#features)  
 - [Installation](#installation)  
+  - [System requirements](#system-requirements)  
+  - [Clone & virtual environment](#clone--virtual-environment)  
+  - [Install PyTorch (GPU/CPU)](#install-pytorch-gpucpu)  
+  - [Install Python dependencies](#install-python-dependencies)  
+  - [Optional: LocalTunnel (share publicly)](#optional-localtunnel-share-publicly)  
+  - [Hugging Face credentials](#hugging-face-credentials)  
 - [Usage](#usage)  
+  - [Run locally](#run-locally)  
+  - [Run with a tunnel (optional)](#run-with-a-tunnel-optional)  
 - [Configuration & Data Format](#configuration--data-format)  
+  - [Example `config.json`](#example-configjson)  
+  - [Example data layout](#example-data-layout)  
 - [Examples](#examples)  
+- [Troubleshooting](#troubleshooting)  
 - [References](#references)  
 - [License](#license)
 
@@ -31,11 +42,24 @@ Manual image editing is time-consuming and often requires skill with graphical t
 - **Inpainting**: mask a region of an input image and fill it according to a prompt.
 - **Streamlit UI**: lightweight interactive frontend for experimentation.
 - **GPU support**: uses PyTorch/CUDA when available for faster inference.
-- **Simple deployment**: runs locally or can be exposed using tools like `localtunnel` or ngrok.
+- **Simple deployment**: runs locally or can be exposed using tools like `localtunnel` or `ngrok`.
 
 ## Installation
 
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/your-username/Image-Processing-Application.git
-   cd Image-Processing-Application
+### System requirements
+- Python 3.8+ (3.9 or 3.10 recommended).
+- Optional GPU with CUDA (for faster inference). The app runs on CPU if no GPU is present (slower).
+- `git`, `node`/`npm` (optional, for LocalTunnel via `npx`).
+
+### Clone & virtual environment
+```bash
+git clone https://github.com/your-username/Image-Processing-Application.git
+cd Image-Processing-Application
+
+# Create & activate venv (Linux / macOS)
+python -m venv venv
+source venv/bin/activate
+
+# Windows (PowerShell)
+python -m venv venv
+venv\Scripts\Activate.ps1

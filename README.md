@@ -17,11 +17,6 @@ This project provides an interactive web-based application for **image generatio
 - [Usage](#usage)  
   - [Run locally](#run-locally)  
   - [Run with a tunnel (optional)](#run-with-a-tunnel-optional)  
-- [Configuration & Data Format](#configuration--data-format)  
-  - [Example `config.json`](#example-configjson)  
-  - [Example data layout](#example-data-layout)  
-- [Examples](#examples)  
-- [Troubleshooting](#troubleshooting)  
 - [References](#references)  
 - [License](#license)
 
